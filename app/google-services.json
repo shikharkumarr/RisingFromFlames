@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "30986643050",
+    "firebase_url": "https://hackoverflow-2f96e-default-rtdb.firebaseio.com",
+    "project_id": "hackoverflow-2f96e",
+    "storage_bucket": "hackoverflow-2f96e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:30986643050:android:605c01726b513709620c13",
+        "android_client_info": {
+          "package_name": "com.aliferous.hacksoverflow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "30986643050-hpep6bn04i4luqtl8lm157uimfp62m2p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZ_LKHVobC1vkbt_KzN0BPkLgy3ZtwOHo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "30986643050-hpep6bn04i4luqtl8lm157uimfp62m2p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:30986643050:android:17b43c00a1fc1902620c13",
+        "android_client_info": {
+          "package_name": "com.aliferous.risingflames"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "30986643050-hpep6bn04i4luqtl8lm157uimfp62m2p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZ_LKHVobC1vkbt_KzN0BPkLgy3ZtwOHo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "30986643050-hpep6bn04i4luqtl8lm157uimfp62m2p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

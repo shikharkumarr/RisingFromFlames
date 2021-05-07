@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/faculty_item_edit_image"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="22dp"
+        android:src="@drawable/profile_dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/centurygothicbold"
+        android:text="Alerts"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/Name" />
+
+    <TextView
+        android:id="@+id/Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/centurygothicbold"
+        android:text="Full Name"
+        android:textColor="#000000"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.443"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/faculty_item_edit_image" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle1_vector"
+        android:paddingStart="10dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="15dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7">
+
+
+        <TextView
+            android:id="@+id/reg_textView8"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/centurygothic"
+            android:text="Alert the fire deparment automatically in case of fire"
+            android:textColor="#101010"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/reg_textView9"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/centurygothic"
+            android:text="Alert my neighbours in case of a fire at my house"
+            android:textColor="#101010"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reg_textView8" />
+
+        <TextView
+            android:id="@+id/reg_textView10"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/centurygothic"
+            android:text="Alert me in case of a fire in my neighbourhood"
+            android:textColor="#101010"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reg_textView9" />
+
+
+        <TextView
+            android:id="@+id/reg_textView11"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/centurygothic"
+            android:text="Alert my emergency contacts in case a fire at my house"
+            android:textColor="#101010"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reg_textView10" />
+
+        <TextView
+            android:id="@+id/reg_textView12"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/centurygothicitalics"
+            android:text="Tap to add/view emergency contacts"
+            android:textColor="#9C9C9C"
+            android:textSize="14.5sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reg_textView11" />
+
+        <Switch
+            android:id="@+id/pr_switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/reg_textView8"
+            app:layout_constraintStart_toEndOf="@+id/reg_textView8"
+            app:layout_constraintTop_toTopOf="@+id/reg_textView8" />
+
+        <Switch
+            android:id="@+id/pr_switch2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/reg_textView9"
+            app:layout_constraintStart_toEndOf="@+id/reg_textView9"
+            app:layout_constraintTop_toTopOf="@+id/reg_textView9" />
+
+        <Switch
+            android:id="@+id/pr_switch3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/reg_textView10"
+            app:layout_constraintStart_toEndOf="@+id/reg_textView10"
+            app:layout_constraintTop_toTopOf="@+id/reg_textView10" />
+
+        <Switch
+            android:id="@+id/pr_switch4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/reg_textView11"
+            app:layout_constraintStart_toEndOf="@+id/reg_textView11"
+            app:layout_constraintTop_toTopOf="@+id/reg_textView11" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/NavBar"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/maintainence_navbar_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1"
+            app:srcCompat="@drawable/navbarbg_vector" />
+
+        <ImageView
+            android:id="@+id/maintainence_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_vector"
+            app:layout_constraintBottom_toBottomOf="@id/maintainence_navbar_bg"
+            app:layout_constraintEnd_toStartOf="@+id/maintainence_maintenance"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/maintainence_navbar_bg"
+            app:layout_constraintVertical_bias="0.5" />
+
+
+        <ImageView
+            android:id="@+id/maintainence_maintenance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/maintenance_vector"
+            app:layout_constraintBottom_toBottomOf="@+id/maintainence_navbar_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/maintainence_navbar_bg"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <ImageView
+            android:id="@+id/maintainence_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/profile_vector"
+            app:layout_constraintBottom_toBottomOf="@+id/maintainence_navbar_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toEndOf="@+id/maintainence_maintenance"
+            app:layout_constraintTop_toTopOf="@+id/maintainence_navbar_bg"
+            app:layout_constraintVertical_bias="0.5" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

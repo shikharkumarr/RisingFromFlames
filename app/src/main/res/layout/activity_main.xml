@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Main_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="visible"
+        >
+
+
+        <ImageView
+            android:id="@+id/main_map"
+            android:layout_width="238dp"
+            android:layout_height="238dp"
+
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv"
+            app:srcCompat="@drawable/map" />
+
+        <TextView
+            android:id="@+id/greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+
+            android:layout_marginTop="36dp"
+            android:fontFamily="@font/centurygothicbold"
+            android:text="Welcome, user"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/greeting3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="48dp"
+            android:fontFamily="@font/centurygothicbold"
+            android:gravity="center"
+            android:text="There are no new fire cases \nin your neighbourhood. "
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/centurygothic"
+            android:text="We have great news!"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="@+id/greeting"
+            app:layout_constraintTop_toBottomOf="@+id/greeting" />
+
+
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/centurygothic"
+            android:text="Tap to view fire cases in the past week."
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/greeting3" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/NavBar"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/navbar_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1"
+                app:srcCompat="@drawable/navbarbg_vector" />
+
+            <ImageView
+                android:id="@+id/main_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/home_vector"
+                app:layout_constraintBottom_toBottomOf="@id/navbar_bg"
+                app:layout_constraintEnd_toStartOf="@+id/main_maintenance"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/navbar_bg"
+                app:layout_constraintVertical_bias="0.5" />
+
+
+            <ImageView
+                android:id="@+id/main_maintenance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/maintenance_vector"
+                app:layout_constraintBottom_toBottomOf="@+id/navbar_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/navbar_bg"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <ImageView
+                android:id="@+id/main_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/profile_vector"
+                app:layout_constraintBottom_toBottomOf="@+id/navbar_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintStart_toEndOf="@+id/main_maintenance"
+                app:layout_constraintTop_toTopOf="@+id/navbar_bg"
+                app:layout_constraintVertical_bias="0.5" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/Do_Dont_Heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="35dp"
+            android:fontFamily="@font/centurygothicbold"
+            android:gravity="center"
+            android:text="Fire safety- DO’s &amp; DON’Ts"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_map" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/do_dont_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            app:layout_constraintBottom_toTopOf="@+id/NavBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Do_Dont_Heading"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/cardview"
+            android:visibility="gone">
+
+            <eightbitlab.com.blurview.BlurView
+                android:id="@+id/main_background_blur"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/detailed_do_bg"
+                android:layout_width="300dp"
+                android:layout_height="500dp"
+                android:background="@drawable/do_bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/det_Text"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/centurygothicbold"
+                android:text="Evacuate the building."
+                android:textColor="@android:color/white"
+                android:textSize="36sp"
+                app:layout_constraintStart_toStartOf="@+id/detailed_do_bg"
+                app:layout_constraintTop_toTopOf="@+id/detailed_do_bg" />
+
+            <TextView
+                android:id="@+id/det_details"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="28dp"
+                android:fontFamily="@font/centurygothic"
+                android:text="Evacuate the building details."
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/detailed_do_bg"
+                app:layout_constraintTop_toBottomOf="@+id/det_Text" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/backgroundSplash"
+            android:layout_width="238dp"
+            android:layout_height="238dp"
+            android:background="@drawable/map_bg_vector"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/main_map"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/main_map" />
+
+        <TextView
+            android:visibility="visible"
+            android:id="@+id/SplashText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi, User.\nYou are safe."
+            android:fontFamily="@font/centurygothicbold"
+            android:textColor="@android:color/white"
+            android:textSize="42sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.225"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.263" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

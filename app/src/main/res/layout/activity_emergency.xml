@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9C0000"
+    tools:context=".EmergencyActivity">
+
+    <ImageView
+        android:id="@+id/circle1"
+        android:layout_width="450dp"
+        android:layout_height="450dp"
+        android:background="@drawable/circle1_vector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <ImageView
+        android:id="@+id/circle2"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="@drawable/circle2_vector"
+        app:layout_constraintBottom_toBottomOf="@+id/circle1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/circle1" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/centurygothicbold"
+        android:text="SOS"
+        android:textColor="#FFFFFF"
+        android:textSize="45sp"
+        app:layout_constraintBottom_toBottomOf="@+id/circle2"
+        app:layout_constraintEnd_toEndOf="@+id/circle2"
+        app:layout_constraintStart_toStartOf="@+id/circle2"
+        app:layout_constraintTop_toTopOf="@+id/circle2" />
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/centurygothic"
+        android:text="Your house is on fire"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/sosComplete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/circle1"
+        app:layout_constraintVertical_bias="0.20" />
+
+    <Button
+        android:id="@+id/sosCall"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rectangle2_vector"
+        android:fontFamily="@font/centurygothicbold"
+        android:text="Alert the Fire Department"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/sosComplete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <Button
+        android:id="@+id/sosCall2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rectangle2_vector"
+        android:fontFamily="@font/centurygothicbold"
+        android:text="Contact the Ambulance"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintBottom_toTopOf="@+id/sosComplete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sosCall" />
+
+    <Button
+        android:id="@+id/sosComplete"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/rectangle2_vector"
+        android:fontFamily="@font/centurygothic"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="The Situation has been resolved"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

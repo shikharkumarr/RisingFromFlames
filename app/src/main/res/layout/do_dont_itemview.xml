@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/do_dont_constraint"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/itemview_bg"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/do_dont_vector" />
+
+    <TextView
+        android:id="@+id/Text"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/centurygothic"
+        android:text="Evacuate the\nbuildinng."
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/itemview_bg"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="@+id/itemview_bg"
+        app:layout_constraintTop_toTopOf="@+id/itemview_bg" />
+
+    <ImageView
+        android:id="@+id/circle_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/itemview_bg"
+        app:layout_constraintEnd_toEndOf="@+id/itemview_bg"
+        app:layout_constraintStart_toStartOf="@+id/itemview_bg"
+        app:layout_constraintTop_toBottomOf="@+id/itemview_bg" />
+
+    <TextView
+        android:id="@+id/Number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/centurygothicbold"
+        android:text="1"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/circle_bg"
+        app:layout_constraintEnd_toEndOf="@+id/circle_bg"
+        app:layout_constraintStart_toStartOf="@+id/circle_bg"
+        app:layout_constraintTop_toTopOf="@+id/circle_bg" />
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/centurygothic"
+        android:text="Tap to read more."
+        android:textColor="#9C9C9C"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/circle_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/itemview_bg"
+        app:layout_constraintTop_toBottomOf="@+id/Text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

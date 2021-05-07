@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MaintainenceActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Sensor_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/rectangle1_vector"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Sensor_Heading">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/sensor_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/Sensor_Heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/centurygothicbold"
+        android:text="SENSORS"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="@+id/Sensor_list"
+        app:layout_constraintTop_toBottomOf="@+id/tv2" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/centurygothic"
+        android:text="Maintainence"
+
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/Sensor_Heading"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/new_sensor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/centurygothic"
+
+        android:text="Tap to add new sensor"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Sensor_list" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/NavBar"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/maintainence_navbar_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1"
+            app:srcCompat="@drawable/navbarbg_vector" />
+
+        <ImageView
+            android:id="@+id/maintainence_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_vector"
+            app:layout_constraintBottom_toBottomOf="@id/maintainence_navbar_bg"
+            app:layout_constraintEnd_toStartOf="@+id/maintainence_maintenance"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/maintainence_navbar_bg"
+            app:layout_constraintVertical_bias="0.5" />
+
+
+        <ImageView
+            android:id="@+id/maintainence_maintenance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/maintenance_vector"
+            app:layout_constraintBottom_toBottomOf="@+id/maintainence_navbar_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/maintainence_navbar_bg"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <ImageView
+            android:id="@+id/maintainence_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/profile_vector"
+            app:layout_constraintBottom_toBottomOf="@+id/maintainence_navbar_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toEndOf="@+id/maintainence_maintenance"
+            app:layout_constraintTop_toTopOf="@+id/maintainence_navbar_bg"
+            app:layout_constraintVertical_bias="0.5" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <eightbitlab.com.blurview.BlurView
+        android:id="@+id/background_blur"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/NavBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone">
+
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/new_sensor_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/add_new_sensor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/centurygothic"
+            android:text="ADD"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintEnd_toEndOf="@+id/et_date"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="@+id/et_date"
+            app:layout_constraintTop_toBottomOf="@+id/et_date"
+            app:layout_constraintVertical_bias="0.192" />
+
+        <TextView
+            android:id="@+id/date_tv"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/centurygothic"
+            android:text="Date of Installation"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="@+id/id_tv"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/id_tv"
+            app:layout_constraintTop_toBottomOf="@+id/sensor_id_tv" />
+
+        <TextView
+            android:id="@+id/greeting4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="52dp"
+            android:fontFamily="@font/centurygothicbold"
+            android:text="ADD NEW SENSOR"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4"
+            app:srcCompat="@drawable/add" />
+
+        <TextView
+            android:id="@+id/location_tv"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/centurygothic"
+            android:text="Location of Installation"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/greeting4" />
+
+        <EditText
+            android:id="@+id/et_location"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/rectangle_et_bg"
+            android:fontFamily="@font/centurygothicitalics"
+            android:paddingStart="15dp"
+            android:textColor="@android:color/black"
+            android:gravity="center_vertical"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/location_tv"
+            app:layout_constraintStart_toStartOf="@+id/location_tv"
+            app:layout_constraintTop_toBottomOf="@+id/location_tv"
+            app:layout_constraintVertical_bias="0.25" />
+
+        <TextView
+            android:id="@+id/sensor_id_tv"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_et_bg"
+            android:fontFamily="@font/centurygothicitalics"
+            android:gravity="center_vertical"
+            android:hint="Scan for sensor ID"
+            android:paddingStart="15dp"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/et_location"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/et_location"
+            app:layout_constraintTop_toBottomOf="@+id/id_tv" />
+
+        <TextView
+            android:id="@+id/et_date"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_et_bg"
+            android:fontFamily="@font/centurygothicitalics"
+            android:gravity="center_vertical"
+            android:hint="DD/MM/YYYY"
+            android:paddingStart="15dp"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/sensor_id_tv"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/sensor_id_tv"
+            app:layout_constraintTop_toBottomOf="@+id/date_tv" />
+
+        <TextView
+            android:id="@+id/id_tv"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/centurygothic"
+            android:text="Sensor ID"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="@+id/location_tv"
+            app:layout_constraintTop_toBottomOf="@+id/et_location" />
+
+        <ImageView
+            android:id="@+id/Scan_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/sensor_id_tv"
+            app:layout_constraintEnd_toEndOf="@+id/sensor_id_tv"
+            app:layout_constraintTop_toBottomOf="@+id/id_tv"
+            app:layout_constraintVertical_bias="0.533"
+            app:srcCompat="@drawable/camera" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="visible">
+
+
+        <com.otaliastudios.cameraview.CameraView
+            android:id="@+id/cameraview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <View
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rectangle" />
+    </FrameLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
